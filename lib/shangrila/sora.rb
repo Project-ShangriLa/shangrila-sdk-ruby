@@ -2,8 +2,6 @@ require 'net/http'
 require 'uri'
 require 'json'
 require 'httpclient'
-require 'pathname'
-require 'digest/md5'
 
 module Shangrila
 
