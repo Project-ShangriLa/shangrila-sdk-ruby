@@ -14,7 +14,7 @@ module Shangrila
     # @param [Array] accounts データ取得対象のアニメTwitter公式アカウント
     # @return [Hash] アカウント群をキーとしたハッシュ
     def follower_status(accounts)
-      response = HTTPClient.get(sprintf('/follower_status&accounts=%s', URL, accounts.join(',')))
+      response = HTTPClient.get(sprintf('%s/follower/status?accounts=%s', URL, accounts.join(',')))
       JSON.load(response.body)
     end
 
@@ -24,9 +24,9 @@ module Shangrila
     def follower_history(account, end_date = nil)
       response = nil
       if end_date.nil?
-        response = HTTPClient.get(sprintf('/follower_history&account=%s', URL, account))
+        response = HTTPClient.get(sprintf('%s/follower/history?account=%s', URL, account))
       else
-        response = HTTPClient.get(sprintf('/follower_history&account=%s&end_date=%d', URL, account, end_date))
+        response = HTTPClient.get(sprintf('%s/follower/history?account=%s&end_date=%d', URL, account, end_date))
       end
 
       JSON.load(response.body)

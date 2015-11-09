@@ -47,6 +47,6 @@ or Gemfile
 
 #### Get Twitter Follower History
 
-```Shangrila::Sana.new().follower_history(usagi_anime)```
+```Shangrila::Sana.new().follower_history('usagi_anime')```
 
-```Shangrila::Sana.new().follower_history(usagi_anime, 1446721206)```
+```Shangrila::Sana.new().follower_history('usagi_anime', 1446901208)```
