@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "shangrila"
   spec.version       = Shangrila::VERSION
   spec.authors       = ["AKB428"]
-  spec.email         = ["otoraru@gmail.com"]
+  spec.email         = ["gandara016+1@gmail.com"]
   spec.summary       = %q{ShanguriLa. Anime API SDK}
   spec.description   = %q{ShanguriLa. Anime REST API SDK}
   spec.homepage      = "https://github.com/Project-ShangriLa"
