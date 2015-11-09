@@ -39,14 +39,12 @@ or Gemfile
 
 ### Twitter API
 
-
 #### Get Twitter Follower Status
 
-```Shangrila::Sana.new().follower_status(['usagi_anime','kinmosa_anime','aldnoahzero'])```
-
+``Shangrila::Sana.new().follower_status(['usagi_anime','kinmosa_anime','aldnoahzero'])``
 
 #### Get Twitter Follower History
 
-```Shangrila::Sana.new().follower_history('usagi_anime')```
+``Shangrila::Sana.new().follower_history('usagi_anime')``
 
-```Shangrila::Sana.new().follower_history('usagi_anime', 1446901208)```
+``Shangrila::Sana.new().follower_history('usagi_anime', 1446901208)``
