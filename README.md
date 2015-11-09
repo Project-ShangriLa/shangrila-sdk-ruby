@@ -42,9 +42,11 @@ or Gemfile
 
 #### Get Twitter Follower Status
 
-```Shangrila::Sora.new().get_flat_data(year, cours, property_list)```
+```Shangrila::Sana.new().follower_status(['usagi_anime','kinmosa_anime','aldnoahzero'])```
 
 
 #### Get Twitter Follower History
 
-```Shangrila::Sora.new().get_flat_data(year, cours, property_list)```
+```Shangrila::Sana.new().follower_history(usagi_anime)```
+
+```Shangrila::Sana.new().follower_history(usagi_anime, 1446721206)```
