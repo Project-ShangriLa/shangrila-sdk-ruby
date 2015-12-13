@@ -36,6 +36,13 @@ or Gemfile
 
 ```Shangrila::Sora.new().get_flat_data(2014, 2, ['title', 'twitter_hash_tag'])```
 
+#### (IN irb) 
+
+```
+irb(main):001:0> require 'shangrila'
+=> true
+irb(main):002:0> Shangrila::Sora.new().get_flat_data(2015, 4, ['id', 'title']).each{|v| p v}
+```
 
 ### Twitter API
 
