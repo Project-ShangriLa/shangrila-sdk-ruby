@@ -24,6 +24,12 @@ or Gemfile
 
 ```Shangrila::Sora.new().get_title_list(2015, 1)```
 
+#### Get anime master data map key=id
+
+```Shangrila::Sora.new().get_map_key_id(year, cours)```
+
+```Shangrila::Sora.new().get_map_key_id(2015, 1)```
+
 #### Get anime title map
 
 ```Shangrila::Sora.new().get_map_with_key_title(year, cours, property)```

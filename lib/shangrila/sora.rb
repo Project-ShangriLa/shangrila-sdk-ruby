@@ -43,6 +43,19 @@ module Shangrila
 
     # @param [Int] year データ取得対象のアニメの年
     # @param [Int] cours データ取得対象のアニメの年のクール番号 1-4
+    # @return [HASH] idをkeyとしたハッシュデータ
+    def get_map_key_id(year, cours)
+      master_list = get_master_data(year, cours)
+
+      master_map = {}
+
+      master_list.each{|master| master_map[master['id']] = master}
+
+      master_map
+    end
+
+    # @param [Int] year データ取得対象のアニメの年
+    # @param [Int] cours データ取得対象のアニメの年のクール番号 1-4
     # @param [property] データ取得対象のプロパティリスト
     # @return [Array] 1タイトル1配列としたフラット配列
     def get_flat_data(year, cours, property_list)
