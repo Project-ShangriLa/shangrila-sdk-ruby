@@ -61,3 +61,5 @@ irb(main):002:0> Shangrila::Sora.new().get_flat_data(2015, 4, ['id', 'title']).e
 ``Shangrila::Sana.new().follower_history('usagi_anime')``
 
 ``Shangrila::Sana.new().follower_history('usagi_anime', 1446901208)``
+
+``Shangrila::Sana.new().follower_history_daily('usagi_anime', 30)``

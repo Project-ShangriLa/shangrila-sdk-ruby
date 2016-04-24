@@ -18,7 +18,7 @@ module Shangrila
       JSON.load(response.body)
     end
 
-    # @param [Array] account データ取得対象のアニメTwitter公式アカウント
+    # @param [String] account データ取得対象のアニメTwitter公式アカウント
     # @param [int] end_date 検索対象の終了日時 where update_at < end_date)
     # @return [Array] フォロワー数と更新日時のハッシュの配列
     def follower_history(account, end_date = nil)
@@ -32,6 +32,15 @@ module Shangrila
       JSON.load(response.body)
     end
 
+    # /anime/v1/twitter/follower/history/daily
+    # @param [String] account データ取得対象のアニメTwitter公式アカウント
+    # @param [int] days 取得日数
+    # @return [Array] フォロワー数と更新日時のハッシュの配列
+    def follower_history_daily(account, days = nil)
+      response = HTTPClient.get(sprintf('%s/follower/history/daily?account=%s&days=%s', URL, account, days))
+
+      JSON.load(response.body)
+    end
   end
 
 end
