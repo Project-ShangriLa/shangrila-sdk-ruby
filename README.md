@@ -8,7 +8,9 @@ or Gemfile
 
 ``gem 'shangrila'``
 
-## anime-api command
+## Command Usage
+
+### anime-api
 
 ```
 shell$ anime-api -h
@@ -20,7 +22,14 @@ Usage: anime-api [options]
 shell$ anime-api -y 2016 -c 4 | jq .
 ```
 
-## gem Usage
+### anime-api-twitter
+
+```
+shell$ anime-api-twitter -a usagi_anime
+```
+
+
+## Gem Usage
 
 ### Master API
 

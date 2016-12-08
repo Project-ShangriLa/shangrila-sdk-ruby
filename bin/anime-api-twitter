@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+require 'shangrila'
+require 'optparse'
+
+opt = OptionParser.new
+
+account = ''
+
+Version = '1.0.0'
+
+opt.on('-a twitter_account', 'twitter account name') {|v| account = v}
+
+begin
+ opt.parse!(ARGV)
+rescue  => exc
+  p exc
+  return
+end
+
+#TODO sanaは待機系サーバーがない
+
+api = Shangrila::Sana.new()
+puts api.follower_history(account)

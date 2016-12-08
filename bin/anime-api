@@ -21,8 +21,12 @@ rescue  => exc
   return
 end
 
-hostname = nil
+anime_master = nil
 
-hostname = 'api.tv-anime.biz' if standby_server
+if standby_server
+  anime_master = Shangrila::Sora.new('api.tv-anime.biz')
+else
+  anime_master = Shangrila::Sora.new()
+end
 
-puts Shangrila::Sora.new(hostname).get_master_data_raw(year, cours)
+puts anime_master.get_master_data_raw(year, cours)
