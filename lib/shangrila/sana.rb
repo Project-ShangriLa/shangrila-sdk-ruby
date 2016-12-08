@@ -14,7 +14,7 @@ module Shangrila
     # @param [Array] accounts データ取得対象のアニメTwitter公式アカウント
     # @param [boolean] is_to_json JSONをRubyHashにして返すかどうか
     # @return [Hash] アカウント群をキーとしたハッシュ
-    def follower_status(accounts, is_to_json)
+    def follower_status(accounts, is_to_json = true)
       response = HTTPClient.get(sprintf('%s/follower/status?accounts=%s', @url, accounts.join(',')))
       is_to_json ? JSON.load(response.body) : response.body
     end

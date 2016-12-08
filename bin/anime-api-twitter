@@ -20,4 +20,4 @@ end
 #TODO sanaは待機系サーバーがない
 
 api = Shangrila::Sana.new()
-puts api.follower_history(account)
+puts api.follower_history(account, false)
