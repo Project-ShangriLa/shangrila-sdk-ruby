@@ -8,7 +8,19 @@ or Gemfile
 
 ``gem 'shangrila'``
 
-##Usage
+## anime-api command
+
+```
+shell$ anime-api -h
+Usage: anime-api [options]
+    -c COURS                         anime cours..1=winter or 2=spring or 3=summer or 4=autumn
+    -y YEAR                          year...2014 <= ?
+    -s                               connect standby_server.  default=moemoe.tokyo standby=api.tv-anime.biz
+
+shell$ anime-api -y 2016 -c 4 | jq .
+```
+
+## gem Usage
 
 ### Master API
 

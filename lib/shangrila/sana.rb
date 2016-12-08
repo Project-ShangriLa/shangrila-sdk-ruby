@@ -8,7 +8,8 @@ module Shangrila
   class Sana
     URL = 'http://api.moemoe.tokyo/anime/v1/twitter'
 
-    def initialize
+    def initialize(hostname = 'api.moemoe.tokyo')
+      @url = "http://#{hostname}/anime/v1/master"
     end
 
     # @param [Array] accounts データ取得対象のアニメTwitter公式アカウント
