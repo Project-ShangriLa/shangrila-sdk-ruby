@@ -14,6 +14,14 @@ module Shangrila
     # @param [Int] year データ取得対象のアニメの年
     # @param [Int] cours データ取得対象のアニメの年のクール番号 1-4
     # @return [JSON] アニメのマスターデータすべて
+    def get_master_data_raw(year, cours)
+      response = HTTPClient.get(sprintf("%s/%s/%s", URL, year, cours))
+      response.body
+    end
+
+    # @param [Int] year データ取得対象のアニメの年
+    # @param [Int] cours データ取得対象のアニメの年のクール番号 1-4
+    # @return [JSON->RubyHash] アニメのマスターデータすべて
     def get_master_data(year, cours)
       response = HTTPClient.get(sprintf("%s/%s/%s", URL, year, cours))
       JSON.load(response.body)

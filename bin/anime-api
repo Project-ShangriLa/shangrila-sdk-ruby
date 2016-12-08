@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+require 'shangrila'
+require 'optparse'
+
+opt = OptionParser.new
+
+standby_server = nil
+year = 2014
+cours = 1
+
+Version = '1.0.0'
+
+opt.on('-c COURS', 'anime cours..1=winter or 2=spring or 3=summer or 4=autumn') {|v| cours = v}
+opt.on('-y YEAR', 'year...2014 <= ?') {|v| year = v}
+opt.on('-s', 'connect standby_server.  default=moemoe.tokyo standby=api.tv-anime.biz'){standby_server = true}
+
+begin
+ opt.parse!(ARGV)
+rescue  => exc
+  p exc
+  return
+end
+
+puts Shangrila::Sora.new().get_master_data_raw(year, cours)
